@@ -1,0 +1,142 @@
+Hosts
+=====
+
+address         mac                name                    os_name  os_flavor  os_sp  purpose  info  comments
+-------         ---                ----                    -------  ---------  -----  -------  ----  --------
+127.0.0.1                                                  Unknown                    device         
+198.51.100.111                     atacante.ssi.net        Linux               3.X    server         
+198.51.100.222  08:00:27:22:22:22  metasploitable.ssi.net  Linux               2.6.X  server         
+
+
+
+
+Services
+========
+
+host            port   proto  name         state  info
+----            ----   -----  ----         -----  ----
+198.51.100.111  21     tcp    ftp          open   OpenBSD ftpd 6.4 Linux port 0.17
+198.51.100.111  3306   tcp    mysql        open   MariaDB unauthorized
+198.51.100.111  22     tcp    ssh          open   OpenSSH 7.4p1 Debian 10+deb9u7 protocol 2.0
+198.51.100.111  143    tcp    imap         open   Dovecot imapd
+198.51.100.111  23     tcp    telnet       open   
+198.51.100.111  110    tcp    pop3         open   Dovecot pop3d
+198.51.100.111  25     tcp    smtp         open   Postfix smtpd
+198.51.100.111  79     tcp    finger       open   Debian fingerd
+198.51.100.222  1099   tcp    rmiregistry  open   GNU Classpath grmiregistry
+198.51.100.222  25     tcp    smtp         open   Postfix smtpd
+198.51.100.222  80     tcp    http         open   Apache httpd 2.2.8 (Ubuntu) DAV/2
+198.51.100.222  23     tcp    telnet       open   Linux telnetd
+198.51.100.222  111    tcp    rpcbind      open   2 RPC #100000
+198.51.100.222  139    tcp    netbios-ssn  open   Samba smbd 3.X - 4.X workgroup: WORKGROUP
+198.51.100.222  22     tcp    ssh          open   OpenSSH 4.7p1 Debian 8ubuntu1 protocol 2.0
+198.51.100.222  445    tcp    netbios-ssn  open   Samba smbd 3.X - 4.X workgroup: WORKGROUP
+198.51.100.222  512    tcp    exec         open   netkit-rsh rexecd
+198.51.100.222  513    tcp    login        open   
+198.51.100.222  514    tcp    shell        open   Netkit rshd
+198.51.100.222  53     tcp    domain       open   ISC BIND 9.4.2
+198.51.100.222  1524   tcp    shell        open   Metasploitable root shell
+198.51.100.222  2049   tcp    nfs          open   2-4 RPC #100003
+198.51.100.222  2121   tcp    ftp          open   ProFTPD 1.3.1
+198.51.100.222  21     tcp    ftp          open   vsftpd 2.3.4
+198.51.100.222  3306   tcp    mysql        open   MySQL 5.0.51a-3ubuntu5
+198.51.100.222  3632   tcp    distccd      open   distccd v1 (GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4)
+198.51.100.222  5432   tcp    postgresql   open   PostgreSQL DB 8.3.0 - 8.3.7
+198.51.100.222  5900   tcp    vnc          open   VNC protocol 3.3
+198.51.100.222  6000   tcp    x11          open   access denied
+198.51.100.222  6667   tcp    irc          open   UnrealIRCd
+198.51.100.222  6697   tcp    irc          open   UnrealIRCd
+198.51.100.222  8009   tcp    ajp13        open   Apache Jserv Protocol v1.3
+198.51.100.222  8080   tcp    http         open   Apache Tomcat/Coyote JSP engine 1.1
+198.51.100.222  8787   tcp    drb          open   Ruby DRb RMI Ruby 1.8; path /usr/lib/ruby/1.8/drb
+198.51.100.222  38940  tcp    status       open   1 RPC #100024
+198.51.100.222  54693  tcp    nlockmgr     open   1-4 RPC #100021
+198.51.100.222  56059  tcp    mountd       open   1-3 RPC #100005
+198.51.100.222  58858  tcp                 open   
+
+
+Vulnerabilities
+=========
+
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=/doc directory browsable refs=CVE-1999-0678,BID-318 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=source_name refs=BID-318,BID-36260,BID-51706,BID-49187,BID-12141 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=Apache 'mod_proxy_ftp' Module Command Injection Vulnerability (Linux) refs=CVE-2009-3095,BID-36254 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=Apache 'mod_proxy_ftp' Module Denial Of Service Vulnerability (Linux) refs=CVE-2009-3094,BID-36260 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=Apache HTTP Server 'httpOnly' Cookie Information Disclosure Vulnerability refs=CVE-2012-0053,BID-51706 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=awiki Multiple Local File Include Vulnerabilities refs=BID-49187 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=DistCC Remote Code Execution Vulnerability refs=CVE-2004-2687 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=Distributed Ruby (dRuby/DRb) Multiple Remote Code Execution Vulnerabilities refs=BID-47071 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=HTTP Debugging Methods (TRACE/TRACK) Enabled refs=CVE-2003-1567,CVE-2004-2320,CVE-2004-2763,CVE-2005-3398,CVE-2006-4683,CVE-2007-3008,CVE-2008-7253,CVE-2009-2823,CVE-2010-0386,CVE-2012-2223,CVE-2014-7883,BID-9506,BID-9561,BID-11604,BID-15222,BID-19915,BID-24456,BID-33374,BID-36956,BID-36990,BID-37995 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=ICMP Timestamp Detection refs=CVE-1999-0524 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=Multiple Vendors STARTTLS Implementation Plaintext Arbitrary Command Injection Vulnerability refs=CVE-2011-0411,CVE-2011-1430,CVE-2011-1431,CVE-2011-1432,CVE-2011-1506,CVE-2011-1575,CVE-2011-1926,CVE-2011-2165,BID-46767 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=PHP-CGI-based setups vulnerability when parsing query string parameters from php files. refs=CVE-2012-1823,CVE-2012-2311,CVE-2012-2336,CVE-2012-2335,BID-53388 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SMTP antivirus scanner DoS refs=BID-3027 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: 'DHE_EXPORT' Man in the Middle Security Bypass Vulnerability (LogJam) refs=CVE-2015-4000,BID-74733 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: Deprecated SSLv2 and SSLv3 Protocol Detection refs=CVE-2016-0800,CVE-2014-3566 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: Deprecated SSLv2 and SSLv3 Protocol Detection refs=CVE-2016-0800,CVE-2014-3566 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: OpenSSL CCS Man in the Middle Security Bypass Vulnerability refs=CVE-2014-0224,BID-67899 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: Report Weak Cipher Suites refs=CVE-2015-4000,CVE-2013-2566,CVE-2015-2808 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: Report Weak Cipher Suites refs=CVE-2013-2566,CVE-2015-2808 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: RSA Temporary Key Handling 'RSA_EXPORT' Downgrade Issue (FREAK) refs=CVE-2015-0204,BID-71936 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: SSLv3 Protocol CBC Cipher Suites Information Disclosure Vulnerability (POODLE) refs=BID-70574 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=SSL/TLS: SSLv3 Protocol CBC Cipher Suites Information Disclosure Vulnerability (POODLE) refs=BID-70574 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=TCP Sequence Number Approximation Reset Denial of Service Vulnerability refs=CVE-2004-0230,BID-10183 
+[*] Time: 2021-01-15 18:37:46 UTC Vuln: host=127.0.0.1 name=Test HTTP dangerous methods refs=BID-12141 
+[*] Time: 2021-01-15 18:37:47 UTC Vuln: host=127.0.0.1 name=vsftpd Compromised Source Packages Backdoor Vulnerability refs=BID-48539 
+[*] Time: 2021-01-15 18:37:47 UTC Vuln: host=127.0.0.1 name=vsftpd Compromised Source Packages Backdoor Vulnerability refs=BID-48539 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Apache Tomcat Manager Common Administrative Credentials refs=CVE-2009-3099,CVE-2009-3548,CVE-2010-0557,CVE-2010-4094,BID-36253,BID-36954,BID-37086,BID-38084,BID-44172,OSVDB-57898,OSVDB-60176,OSVDB-60317,OSVDB-62118,OSVDB-69008,CWE-255,MSF-Apache Tomcat Manager Application Deployer Upload and Execute,NSS-34970 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Apache Tomcat Default Error Page Version Detection refs=NSS-39446 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Service Detection refs=NSS-22964 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Service Detection refs=NSS-22964 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Samba NDR MS-RPC Request Heap-Based Remote Buffer Overflow refs=CVE-2007-2446,BID-23973,BID-24195,BID-24196,BID-24197,BID-24198,OSVDB-34699,OSVDB-34731,OSVDB-34732,OSVDB-34733,MSF-Samba lsa_io_trans_names Heap Overflow,NSS-25216 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Samba Server Detection refs=NSS-25240 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Backported Security Patch Detection (WWW) refs=NSS-39521 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Service Detection refs=NSS-22964 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=DNS Server Detection refs=NSS-11002 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=DNS Server Detection refs=NSS-11002 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Service Detection refs=NSS-22964 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Telnet Server Detection refs=NSS-10281 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Service Detection refs=NSS-22964 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Backported Security Patch Detection (SSH) refs=NSS-39520 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Remote host has weak Debian OpenSSH Keys in ~/.ssh/authorized_keys refs=CVE-2008-0166,BID-29179,BID-29179,CWE-310,CWE-310,NSS-32320,OSVDB-45029,NSS-32314 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=SSH Protocol Versions Supported refs=NSS-10881 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=SSH Server Type and Version Information refs=NSS-10267 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Service Detection refs=NSS-22964 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Service Detection refs=NSS-22964 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=OS Identification refs=NSS-11936 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=USN-876-1 : postgresql-8.1, postgresql-8.3, postgresql-8.4 vulnerabilities refs=CWE-310,CVE-2009-4034,CVE-2009-4136,OSVDB-61038,OSVDB-61039,USN-876-1,NSS-43622 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=Enumerate IPv4 Interfaces via SSH refs=NSS-25203 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=USN-987-1 : samba vulnerability refs=CVE-2010-3069,OSVDB-67994,USN-987-1,NSS-49236 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=USN-1017-1 : mysql-5.1, mysql-dfsg-5.0, mysql-dfsg-5.1 vulnerabilities refs=CVE-2010-2008,CVE-2010-3677,CVE-2010-3678,CVE-2010-3679,CVE-2010-3680,CVE-2010-3681,CVE-2010-3682,CVE-2010-3683,CVE-2010-3833,CVE-2010-3834,CVE-2010-3835,CVE-2010-3836,CVE-2010-3837,CVE-2010-3838,CVE-2010-3839,CVE-2010-3840,USN-1017-1,NSS-50573 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=USN-950-1 : mysql-dfsg-5.0, mysql-dfsg-5.1 vulnerabilities refs=CVE-2010-1621,CVE-2010-1626,CVE-2010-1848,CVE-2010-1849,CVE-2010-1850,USN-950-1,NSS-46855 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=USN-802-2 : apache2 regression refs=CVE-2009-1890,CVE-2009-1891,USN-802-2,CWE-399,CWE-399,NSS-40655,USN-802-1,NSS-39789 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=USN-951-1 : samba vulnerability refs=CVE-2010-2063,USN-951-1,MSF-Samba chain_reply Memory Corruption (Linux x86),NSS-47035 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=USN-893-1 : samba vulnerability refs=CVE-2010-0787,OSVDB-62186,USN-893-1,CWE-59,NSS-44336 
+[*] Time: 2021-01-15 18:37:38 UTC Vuln: host=198.51.100.222 name=USN-942-1 : postgresql-8.1, postgresql-8.3, postgresql-8.4 vulnerabilities refs=CVE-2010-1169,CVE-2010-1170,OSVDB-64755,OSVDB-64757,USN-942-1,NSS-46700 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1072-1 : linux vulnerabilities refs=CVE-2010-0435,CVE-2010-2943,CVE-2010-3296,CVE-2010-3297,CVE-2010-3448,CVE-2010-3698,CVE-2010-3699,CVE-2010-3858,CVE-2010-3859,CVE-2010-3873,CVE-2010-3875,CVE-2010-3876,CVE-2010-3877,CVE-2010-3880,CVE-2010-4072,CVE-2010-4074,CVE-2010-4078,CVE-2010-4079,CVE-2010-4080,CVE-2010-4081,CVE-2010-4083,CVE-2010-4157,CVE-2010-4160,CVE-2010-4248,USN-1072-1,NSS-52475 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-617-2 : Samba regression refs=CVE-2007-4572,CVE-2008-1105,USN-617-2,CWE-119,CWE-119,NSS-33388,USN-617-1,NSS-33217 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-860-1 : apache2 vulnerabilities refs=CWE-310,CWE-310,CVE-2009-3094,CVE-2009-3095,CVE-2009-3555,OSVDB-57851,OSVDB-57882,OSVDB-59968,OSVDB-59969,OSVDB-59969,OSVDB-59970,OSVDB-59971,OSVDB-59972,OSVDB-59973,OSVDB-59974,USN-860-1,NSS-42858,USN-990-2,NSS-49644 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-753-1 : postgresql-8.1, postgresql-8.3 vulnerability refs=CWE-399,CVE-2009-0922,USN-753-1,NSS-37152 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1199-1 : apache2 vulnerability refs=CVE-2011-3192,USN-1199-1,NSS-56048 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-671-1 : mysql-dfsg-5.0 vulnerabilities refs=CWE-59,CWE-119,CVE-2008-2079,CVE-2008-3963,CVE-2008-4097,CVE-2008-4098,USN-671-1,NSS-37299,CVE-2008-4456,CVE-2008-7247,CVE-2009-2446,CVE-2009-4019,CVE-2009-4030,CVE-2009-4484,USN-897-1,MSF-MySQL yaSSL CertDecoder::GetName Buffer Overflow,NSS-44585 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1018-1 : openssl vulnerability refs=CVE-2010-3864,USN-1018-1,NSS-50649 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=Enumerate IPv6 Interfaces via SSH refs=NSS-25202 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1259-1 : apache2, apache2-mpm-itk vulnerabilities refs=CVE-2011-1176,CVE-2011-3348,CVE-2011-3368,USN-1259-1,NSS-56778 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1003-1 : openssl vulnerabilities refs=CVE-2009-3245,CVE-2010-2939,OSVDB-62844,OSVDB-66946,USN-1003-1,CWE-20,NSS-49805 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1029-1 : openssl vulnerabilities refs=CVE-2008-7270,CVE-2010-4180,USN-1029-1,NSS-51076 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=Enumerate MAC Addresses via SSH refs=NSS-33276 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1042-1 : php5 vulnerabilities refs=CVE-2009-5016,CVE-2010-3436,CVE-2010-3709,CVE-2010-3710,CVE-2010-3870,CVE-2010-4156,CVE-2010-4409,CVE-2010-4645,USN-1042-1,NSS-51502 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-839-1 : samba vulnerabilities refs=CVE-2009-1886,CVE-2009-1888,CVE-2009-2813,CVE-2009-2906,CVE-2009-2948,OSVDB-58519,OSVDB-58520,USN-839-1,CWE-264,NSS-41968 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-918-1 : samba vulnerability refs=CVE-2010-0926,USN-918-1,CWE-22,NSS-45343 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-834-1 : postgresql-8.1, postgresql-8.3 vulnerabilities refs=CVE-2007-6600,CVE-2009-3229,CVE-2009-3230,CVE-2009-3231,OSVDB-57901,OSVDB-57917,OSVDB-57918,USN-834-1,CWE-287,NSS-41045 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-933-1 : postgresql-8.1, postgresql-8.3, postgresql-8.4 vulnerability refs=CVE-2010-0442,OSVDB-62129,USN-933-1,CWE-189,NSS-46179 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1134-1 : apache2, apr vulnerabilities refs=CVE-2011-0419,CVE-2011-1928,USN-1134-1,NSS-55095 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-731-1 : apache2 vulnerabilities refs=CVE-2007-6203,CVE-2007-6420,CVE-2008-1678,CVE-2008-2168,CVE-2008-2364,CVE-2008-2939,OSVDB-47810,USN-731-1,CWE-79,NSS-36589 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1021-1 : apache2 vulnerabilities refs=CVE-2010-1452,CVE-2010-1623,USN-1021-1,NSS-50823 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1229-1 : postgresql-8.3, postgresql-8.4 vulnerability refs=CVE-2011-2483,USN-1229-1,NSS-56506 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1002-1 : postgresql-8.1, postgresql-8.3, postgresql-8.4 vulnerability refs=CVE-2010-3433,OSVDB-68436,USN-1002-1,NSS-49803 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1058-1 : postgresql-8.1, postgresql-8.3, postgresql-8.4 vulnerability refs=CVE-2010-4015,USN-1058-1,NSS-51871 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-787-1 : apache2 vulnerabilities refs=CWE-189,CVE-2009-0023,CVE-2009-1191,CVE-2009-1195,CVE-2009-1955,CVE-2009-1956,USN-787-1,NSS-39371 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-908-1 : apache2 vulnerabilities refs=CVE-2010-0408,CVE-2010-0434,OSVDB-62675,OSVDB-62676,USN-908-1,CWE-200,NSS-45037 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=USN-1075-1 : samba vulnerability refs=CVE-2011-0719,USN-1075-1,NSS-52477 
+[*] Time: 2021-01-15 18:37:39 UTC Vuln: host=198.51.100.222 name=TCP/IP Timestamps Supported refs=NSS-25220 
